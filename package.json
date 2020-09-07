@@ -1,20 +1,40 @@
 {
   "private": true,
-  "name": "sanity-nextjs-landing-pages",
-  "version": "1.0.9",
+  "name": "sanity-nextjs-landing-pages-studio",
+  "version": "1.0.6",
+  "main": "package.json",
+  "author": "Sanity <hello@sanity.io>",
   "scripts": {
-    "build": "lerna run build --parallel",
-    "build-web": "lerna bootstrap && (cd web && npm run build)",
-    "build-studio": "lerna bootstrap && (cd studio && npm run build)",
-    "dev": "lerna run dev --parallel",
-    "format": "lerna run format",
-    "graphql-deploy": "lerna run graphql-deploy",
-    "lint": "lerna run lint",
-    "postinstall": "lerna bootstrap",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sanity build",
+    "dev": "sanity start",
+    "test": "sanity check"
+  },
+  "dependencies": {
+    "@sanity/base": "^1.150",
+    "@sanity/cli": "^1.150",
+    "@sanity/components": "^1.150",
+    "@sanity/core": "^1.150",
+    "@sanity/dashboard": "^1.150",
+    "@sanity/default-layout": "^1.150",
+    "@sanity/default-login": "^1.150",
+    "@sanity/desk-tool": "^1.150",
+    "bcp47": "^1.1.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sanity-plugin-dashboard-widget-document-list": "^0.0.11",
+    "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
   },
   "devDependencies": {
-    "@sanity/cli": "^1.150.1",
-    "lerna": "^3.9.0"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "prettier-eslint-cli": "^4.7.1"
   }
 }
